@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+header, nav, section, article, footer{
+	text-align: center;/*文字置中*/
+}
+
+body{
+    background: rgb(142, 125, 207);
+}
+/*nav*/
+nav{
+    background: teal;
+}
+
+nav a{
+    color:red;
+    text-decoration: none; /*將底線去除*/
+    padding: 20px;
+    display: inline-block;
+}
+
+nav a:hover{
+    color:yellow;
+    background: black;
+}
+
+/* section */
+section{
+	width: 80%; /*可隨視窗大小調整*/
+	margin: auto; /*物件置中*/
+}
+
+article a{
+    color: red;
+}
+
+article a:hover{
+	background: blue;
+	color: green;
+}
+
+article a:active{
+    background: yellow;
+    color: black;
+}
+
+.article_a{
+	color: black;
+}
+
+.article_a:hover article{
+	background: #099;
+	color: #fff;
+}
+
+.article_a:active article{
+	background: #FC0;
+	color: #000;
+}
+
+
+
+
+/* article */
+article{
+	display: inline-block;
+  	 /*設定寬度，否則會以內容元素中最寬的元素寬度作為預設*/
+	width: 180px; 
+ 	/*設定邊寬作為檢視*/
+	border: solid 1px coral;
+	margin:20px;
+}
+

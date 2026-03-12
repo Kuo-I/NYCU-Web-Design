@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content=" width=device-width, initial-scale=1.0 ">
+<title>flexbox</title>
+<!--swiper-->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link href="css/today.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<main>
+<!--section-->
+<section>
+    <!--nav-->
+	<nav>
+    	<a href="#">Watercolor</a>
+        <a href="#">Painting</a>
+        <a href="#">Sculpture</a>
+    </nav>
+</section>
+
+<!--header-->
+<header></header>
+
+<!--article-->
+<article>
+	<div class="imgb">
+    	<img src="images/p4.jpg" /> 
+    </div>
+    <div class="textb">
+    	<h3>flex</h3>
+    	<p>先使用flex讓圖片與文字可以均分容器。圖片會隨容器大小填滿，當不夠尺寸時會被裁切，請留意。</p>
+    </div>
+</article>
+
+<article>
+    <div class="imgb">
+    	<img src="images/p3.jpg" />
+    </div>
+    <div class="textb">
+    	<h3>object-fit</h3>
+    	<p>先使用flex讓圖片與文字可以均分容器。圖片會隨容器大小填滿，當不夠尺寸時會被裁切，請留意。</p>
+    </div>
+    
+    </div>
+</article>
+
+<!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/p4.jpg" /> </div>
+      <div class="swiper-slide"><img src="images/p3.jpg" /> </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+  </div>
+
+<footer>
+&copy;教學練習使用。請留意RWD的效果設定。
+</footer>
+</main>
+
+<!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      speed:2000,//圖片切換時間
+      spaceBetween: 30,//兩張圖間距
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,//圖片停留時間
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+</html>

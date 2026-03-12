@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*aside*/
+aside{
+	float:left;
+	height:480px;
+	width:200px;	
+}
+
+.box{
+	width: 200px;
+	height: 160px;
+	font-size:100px;
+	background: #0CF;
+}
+.box:hover{
+	background:#36F;
+	cursor:pointer;
+}
+.ch_bg{
+    background:#36F;
+}
+
+/*section*/
+section{
+	float:left;
+	height:480px;
+	width:480px;
+	background:#ddd;
+	overflow: hidden;
+}
+.big{
+	width: 1440px;
+
+}
+.content{
+	position:relative;
+	float:left;
+	width:480px;
+	height:480px;
+	background:#F60;
+}
+
+
+.pink{
+	background:#F3C;
+}
+
+.yel{
+	background:#FF0;
+}
+
+
+

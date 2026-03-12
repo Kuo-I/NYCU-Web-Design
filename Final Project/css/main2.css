@@ -1,0 +1,725 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&family=VT323&display=swap');
+/* CSS Document */
+:root {
+  --win98-bg:       #c0c0c0;
+  --win98-light:    #ffffff;
+  --win98-dark:     #808080;
+  --win98-darker:   #404040;
+  --win98-blue:     #000080;
+  --win98-input:    #ffffff;
+  --win98-black:    #000000;
+  --window-header:  #000080;
+  --button-face:    #c0c0c0;
+  --desktop-bg:     #008080;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "VT323", monospace;
+    font-size: 16px;
+  }
+ body {
+  background-image: url('../images/j4.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+   padding-top: 150px;
+}
+
+header{
+  width: 100%;
+	position:fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; 
+	padding:0px 0px;
+	background-color: var(--desktop-bg);
+  
+	text-align:center;
+}
+
+
+.logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.logo-btn {
+  width: 80px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--desktop-bg);
+  border: 4px solid;
+  border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+  box-shadow: 1px 1px 0 0 var(--win98-black);
+  padding: 5px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.logo-btn img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-btn:hover {
+  transform: scale(1.1);
+}
+
+
+h1 svg{
+	width:10%;
+	height:10%;
+}
+
+
+.menu{
+	position:absolute;
+	right:20px;
+	top: 100px;;
+	width:100%;
+	height:30px;
+	font-size:30px;
+	display:block;
+}
+
+.menu:hover{
+	cursor:pointer;
+}
+.menu{
+	display:none;
+}
+
+/* nav bar */
+
+nav{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+	z-index:2000;
+	width:100%;
+	margin:auto;
+	text-align:center;
+	background:#000000;
+  border: 4px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+	font-size:18px;
+   
+}
+
+nav.win98-button{
+	display:inline-block;
+	border-bottom:solid rgba(242, 242, 242, 1) 1px;
+}
+
+nav li a{
+	display: inline-block;
+	width:100%;
+	padding:20px 30px;
+	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
+}
+
+nav li a:hover{
+	background:rgba(207, 181, 59, 1);
+}
+
+.ch_bg{
+	background:rgba(207, 181, 59, 1);
+}
+
+/* nav bar */
+.nav-buttons {
+  display: flex;
+  justify-content: center;  /* 水平置中 */
+  align-items: center;      /* 垂直置中（若有高度） */
+  background: rgba(96, 108, 56, 1);
+  padding: 10px 0;
+  flex-wrap: wrap;          /* 小螢幕時允許換行 */
+  gap: 10px;                /* 按鈕間距 */
+  
+}
+
+.nav-button-row {
+    height: 100%;
+    display: flex;
+    align-items: center; /* 垂直置中按鈕 */
+    justify-content: center;
+}
+.nav-buttons button {
+  background: transparent;
+  border: none;
+  padding: 15px 30px;
+  color: white;
+  font-size: 18px;
+  font-family: "VT323", monospace;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-items: center; /* 垂直置中按鈕 */
+  justify-content: center;
+}
+
+.nav-buttons button:hover {
+  background: rgba(207, 181, 59, 1);
+}
+
+
+section{
+	width:87%;
+	margin: auto;
+  display: grid;
+    grid-template-columns :repeat(4, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+	/*-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    /*-moz-column-count: 3; /* Firefox */
+    /*column-count: 3;*/
+
+    -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 20px; /* Firefox */
+    column-gap: 20px;
+  }
+
+.box2{
+	grid-column: 1;
+	grid-row: 2;
+	justify-self: center; /*along the column*/
+	align-self: center; /*along the row*/
+	padding:30px;
+	background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+}
+
+.box3{
+	grid-column: 3;
+	grid-row: 1;
+	justify-self: center; /*along the column*/
+	align-self: center; /*along the row*/
+	padding:30px;
+	background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+}
+.window2{
+    grid-column: 1;
+	  grid-row: 1/2;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 400px;
+    height: 450px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window3{
+    grid-column: 2;
+	  grid-row: 1/2;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 400px;
+    height: 430px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window4{
+    grid-column: 3;
+	  grid-row: 4/5;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 400px;
+    height: 450px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window5{
+    grid-column: 2;
+	  grid-row: 2/3;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 400px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window6{
+    grid-column: 1;
+	  grid-row: 3/4;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 400px;
+    height:500px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window7{
+    grid-column: 1;
+	  grid-row: 4/5;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 400px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+
+.window9{
+    grid-column: 2;
+	  grid-row: 3/4;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 400px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window10{
+    grid-column: 3;
+	  grid-row: 3/4;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 400px;
+    height: 500px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window11{
+    grid-column: 3;
+	  grid-row: 2/3;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 400px;
+    height: 750px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window:hover{
+	cursor: pointer;
+}
+.imgbox{
+	
+	overflow:hidden;
+    padding: 0px;
+    background-color: var(--win98-input);
+    border: 2px solid;
+    border-color: var(--win98-darker) var(--win98-light)
+                  var(--win98-light) var(--win98-darker);
+}
+
+.window.imgbox img{
+	float: left;
+	width: 80%;
+
+   	-ms-transform: scale(1,1); /* IE 9 */
+    -webkit-transform: scale(1,1); /* Safari */
+    transform: scale(1,1); /* Standard syntax */
+	
+	transition: transform 1.5s;
+	-webkit-transition: transform 1.5s;
+	
+	transition-timing-function: ease-in-out;
+	-webkit-transition-timing-function: ease-in-out;/* Safari */
+
+}
+.window:hover .imgbox img{
+	-ms-transform: scale(1.2,1.2); /* IE 9 */
+    -webkit-transform: scale(1.2,1.2); /* Safari */
+    transform: scale(1.2,1.2); /* Standard syntax */
+}
+  .window-2{
+    display: inline-block;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 400px;
+    height: 600px;
+    max-width: 100%;
+    position: relative;
+  }
+  .window-header {
+    background-color: var(--window-header);
+    color: white;
+    height: 20px;
+    padding: 2px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .window-button {
+    background-color: var(--button-face);
+    border: 1px solid;
+    border-color: var(--win98-light) var(--win98-darker)
+                  var(--win98-darker) var(--win98-light);
+    width: 16px;
+    height: 14px;
+    margin-left: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+   
+  }
+  .window-button :before {
+    content: "x";
+    color: black;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .window-button  :after {
+    content: "CLOSE";
+    /* 以下是可以調整的樣式： */
+    display: block;       /* 讓它換行，或用 inline-block 根據需求調整 */
+    font-size: 10px;
+    color: gray;
+    margin-top: 2px;      /* 與前面 X 的空隙 */
+    text-align: center;   /* 如果寬度大於文字，文字置中 */
+}
+  .form-container {
+    padding: 20px;
+    height: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+  }
+  .login-container {
+    margin-bottom: 25px;
+  }
+  
+  .input-field {
+    margin-bottom: 16px;
+  }
+  
+  .input-field label {
+    display: block;
+    margin-bottom: 6px;
+  }
+  .input-field input {
+    width: 100%;
+    padding: 150px;
+    background-color: var(--win98-input);
+    border: 2px solid;
+    border-color: var(--win98-darker) var(--win98-light)
+                  var(--win98-light) var(--win98-darker);
+  }
+  .input-field-2 input {
+    width: 100%;
+    padding: 150px;
+    background-image: url('../images/G1.gif');
+    background-color: var(--win98-input);
+    border: 2px solid;
+    border-color: var(--win98-darker) var(--win98-light)
+                  var(--win98-light) var(--win98-darker);
+  }
+
+
+  .win98-button {
+    background-color: var(--button-face);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker)
+                  var(--win98-darker) var(--win98-light);
+    padding: 5px 18px;
+    cursor: pointer;
+    position: relative;
+    color: var(--win98-black);
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+  .win98-button:active {
+    border-color: var(--win98-darker) var(--win98-light)
+                  var(--win98-light) var(--win98-darker);
+    padding-top: 6px;
+    padding-left: 19px;
+    padding-bottom: 4px;
+    padding-right: 17px;
+  }
+  .win98-button:focus {
+    outline: 1px dotted black;
+    outline-offset: -5px;
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  .input-type {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+/* For tablets */
+@media screen and (max-width: 768px) { 
+
+  body {
+  background-image: url('../images/j4.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+   padding-top: 0px;
+}
+
+header{
+ background-color: var(--desktop-bg);
+    border: 4px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black); 
+}
+section {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(200px, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  .menu{
+	position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+	z-index:2000;
+	width:100%;
+	margin:auto;
+	text-align:center;
+	height:30px;
+	font-size:30px;
+	display:block;
+}
+
+.menu:hover{
+	cursor:pointer;
+}
+
+nav{
+	width:100%;
+	margin:auto;
+	text-align:center;
+	background:#000000;
+	font-size:18px;
+   
+}
+
+nav.win98-button{
+	display: block;
+	border-bottom:solid rgba(242, 242, 242, 1) 0px;
+}
+
+nav.win98-buttona{
+	display: inline-block;
+	width:100%;
+	padding:20px 30px;
+	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
+}
+
+nav li a:hover{
+	background:rgba(207, 181, 59, 1);
+}
+
+.ch_bg{
+	background:rgba(207, 181, 59, 1);
+}
+
+
+.box2{
+	grid-column: 1;
+	grid-row: 3;
+	justify-self: center; /*along the column*/
+	align-self: center; /*along the row*/
+	padding:30px;
+	background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+   width: 500px;
+   height: 100%;
+    max-width: 100%;
+}
+
+.box3{
+	grid-column: 1;
+	grid-row: 4;
+	justify-self: center; /*along the column*/
+	align-self: center; /*along the row*/
+	padding:30px;
+	background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+ width:500px;
+    max-width: 100%;
+}
+.window2{
+    grid-column: 1;
+	  grid-row: 2;
+    justify-self: center; /*along the column*/
+	  align-self: center;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+ width: 500px;
+    max-width: 100%;
+    height: 500px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window3{
+    grid-column: 1;
+	  grid-row: 5;
+    justify-self: center; /*along the column*/
+	  align-self: center;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+  width: 500px;
+    max-width: 100%;
+    height: 500px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window4{
+    grid-column: 1;
+	  grid-row: 6;
+    justify-self: center; /*along the column*/
+	  align-self: center;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+   width: 500px;
+    max-width: 100%;
+    height: 550px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window5{
+    grid-column: 1;
+	  grid-row: 7;
+    justify-self: center; /*along the column*/
+	  align-self: center;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+  width: 500px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window6{
+    grid-column: 1;
+	  grid-row: 8;
+    justify-self: center; /*along the column*/
+	  align-self: center;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+   width: 500px;
+    max-width: 100%;
+    height:600px;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window7{
+    grid-column: 1;
+	  grid-row:9;
+    justify-self: center; /*along the column*/
+	  align-self: center;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 500px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+
+.window9{
+    grid-column: 1;
+	  grid-row: 10;
+    justify-self: center; /*along the column*/
+	  align-self: center;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 500px;
+    max-width: 100%;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window10{
+    grid-column: 1;
+	  grid-row: 11;
+    justify-self: center; /*along the column*/
+	  align-self: center; 
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+   width: 500px;
+    max-width: 100%;
+    height: 600px;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.window11{
+    grid-column: 1;
+	  grid-row: 12;
+    justify-self: center; /*along the column*/
+	  align-self: center;
+    background-color: var(--win98-bg);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+    box-shadow: 1px 1px 0 0 var(--win98-black);
+    width: 500px;
+    max-width: 100%;
+    height: 900px;
+	border-radius: 10px;
+	overflow:hidden;
+}
+}

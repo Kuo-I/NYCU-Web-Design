@@ -1,0 +1,21 @@
+<ul>
+    <li><a href="index1.html?id=0">全部</a></li>
+    <li><a href="jade.html?id=1">玉器</a></li>
+    <li><a href="#">其他</a></li>
+</ul>
+<script>
+$(document).ready(function(){	
+        
+    var params = new URLSearchParams(window.location.search);
+	var id = params.get("id"); //find the value of id
+		
+	if(id=="null"){
+	$("li").eq(0).addClass("ch_bg");
+	}else{
+	$("li").eq(id).addClass("ch_bg");
+	}
+
+            
+});
+</script>
+    

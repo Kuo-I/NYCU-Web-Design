@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
+
+body{
+	margin:0;
+	padding:0;
+	background: rgba(229,229,229,1);
+	font-family: "Roboto", sans-serif;
+}
+
+/*header*/
+header{
+	width:100%;
+	box-sizing:border-box;
+	text-align:center;
+}
+
+header img{
+	display: block;
+	padding:20px;
+	margin:auto;
+}
+
+
+/* nav bar */
+nav{
+	width:100%;
+	margin:auto;
+	text-align:center;
+	background:rgba(38, 70, 83, 1);
+
+	position: sticky;
+	position: -webkit-sticky;/* Safari */
+  	top: 0;
+	z-index:2000;
+
+}
+
+nav a{
+	padding:20px;
+	display:inline-block;
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+}
+
+nav a:hover{
+	color: rgba(221,120,47,1);
+}
+
+/*seciton*/
+section{
+	width:80%;
+	margin: auto;
+
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+
+    -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 20px; /* Firefox */
+    column-gap: 20px;
+}
+
+
+
+.totop{
+	width:44px;
+	height:44px;
+	background:rgba(38, 70, 83, 1) url(../images/top2x.png) no-repeat;
+	background-size:200%;
+	background-position:0px 0px;
+}
+
+.totop:hover{
+	background:rgba(38, 70, 83, 1) url(../images/top2x.png) no-repeat;
+	background-size:200%;
+	background-position:-44px 0px;
+}
+
+.box{
+	display: inline-block;
+	box-sizing:border-box;
+	width:100%;
+	background:rgba(255,255,255,1);
+	margin:12px 0px 0px;
+	z-index:10;
+
+	box-shadow: 2px 2px 8px rgba(173, 181, 189 ,1);
+	border-radius: 10px;
+	overflow:hidden;
+
+}
+.box:hover{
+	cursor: pointer;
+}
+.imgbox{
+	width:100%;
+	overflow:hidden;
+}
+.box .imgbox img{
+	float: left;
+	width: 100%;
+
+	-ms-transform: scale(1,1); /* IE 9 */
+    -webkit-transform: scale(1,1); /* Safari */
+    transform: scale(1,1); /* Standard syntax */
+	
+	transition: transform 1.5s;
+	-webkit-transition: transform 1.5s;
+	
+	transition-timing-function: ease-in-out;
+	-webkit-transition-timing-function: ease-in-out;/* Safari */
+
+}
+
+.box:hover .imgbox img{
+	-ms-transform: scale(1.2,1.2); /* IE 9 */
+    -webkit-transform: scale(1.2,1.2); /* Safari */
+    transform: scale(1.2,1.2); /* Standard syntax */
+}
+
+.box h3{
+	box-sizing:border-box;
+	padding:0px 20px;
+	color:rgba(221,120,47,1);
+}
+
+.box p{
+	box-sizing:border-box;
+	padding:0px 20px;
+	color:rgba(42, 157, 143 ,1);
+}
+.head{
+	display:inline-block;
+	padding:0px 20px 20px;
+}
+
+.head img{
+	float:left;
+	width:40px;
+	height:40px;
+	border-radius: 50%;
+}
+.head span{
+	float:left;
+	font-size:13px;
+	color:rgba(42, 157, 143 ,1);
+	line-height:40px;
+	margin-left:10px;
+}
+
+/*footer*/
+footer{
+	padding:20px 0px;
+	text-align:center;
+	color:rgba(38, 70, 83, 1);
+}
+
+

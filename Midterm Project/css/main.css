@@ -1,0 +1,187 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap');
+/* CSS Document */
+:root {
+  --win98-bg:       #c0c0c0;
+  --win98-light:    #ffffff;
+  --win98-dark:     #808080;
+  --win98-darker:   #404040;
+  --win98-blue:     #000080;
+  --win98-input:    #ffffff;
+  --win98-black:    #000000;
+  --window-header:  #000080;
+  --button-face:    #c0c0c0;
+  --desktop-bg:     #008080;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 確保 body 高度是整個視窗 */
+    background-image: url('../images/25.png'); /* 你的圖片路徑 */
+    background-size: cover;          /* 自動縮放填滿整個畫面 */
+    background-position: center;     /* 圖片置中對齊 */
+    background-repeat: no-repeat;    /* 不重複平鋪 */
+    background-attachment: fixed;    /* 固定背景，不隨內容滾動 */
+    font-family: "VT323", monospace;
+    font-size: 16px;
+    color: white;
+  }
+  
+.card {
+    position: absolute; /* 讓它可以自由移動 */
+    cursor: move;       /* 顯示為可拖曳游標 */
+    user-select: none;  /* 避免選取文字時干擾拖曳 */
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 8px;
+    user-select: none;
+  }
+.card span {
+    font-family:"VT323", monospace;
+    font-size: 16px;
+    color: rgb(255, 251, 251); /* 視背景色調整 */
+  }
+.window{
+  background-color: var(--win98-bg);
+  border: 2px solid;
+  border-color: var(--win98-light) var(--win98-darker) var(--win98-dark) var(--win98-light);
+  box-shadow: 1px 1px 0 0 var(--win98-black);
+  width: 400px;
+  height: 600px;
+  max-width: 100%;
+  position: relative;
+
+}
+.window-header {
+  background-color: var(--window-header);
+  color: white;
+  height: 20px;
+  padding: 2px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+  }
+  
+.modal-window {
+    background: #ffffff;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 300px;
+    font-family: "VT323", monospace;
+    font-size: 16px;
+    position: relative;
+  }
+  
+.modal-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+ 
+.navbar {
+  background-color: var(--window-header);
+  border: 2px solid;
+  border-color: var( --window-header) var(--win98-darker) var(--win98-dark) var(--win98-light);
+  box-shadow: 1px 1px 0 0 var(--win98-black);
+  width: 1920px;
+  height: 30px;
+  max-width: 100%;
+  position: fixed;
+  bottom: 0;             /* 固定在底部 */
+  left: 50%;             /* 水平置中 */
+  transform: translateX(-50%); /* 水平置中修正 */
+  }
+  .button-row {
+    height: 100%;
+    display: flex;
+    align-items: center; /* 垂直置中按鈕 */
+    justify-content: center;
+}
+  .win98-button {
+    background-color: var(--button-face);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker)
+                  var(--win98-darker) var(--win98-light);
+    padding: 5px 18px;
+    cursor: pointer;
+    position: relative;
+    color: var(--win98-black);
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-family:"VT323", monospace;
+    font-size: 16px;
+  }
+  .win98-button:active {
+    border-color: var(--win98-darker) var(--win98-light)
+                  var(--win98-light) var(--win98-darker);
+    padding-top: 6px;
+    padding-left: 19px;
+    padding-bottom: 4px;
+    padding-right: 17px;
+  }
+  .win98-button:focus {
+    outline: 1px dotted black;
+    outline-offset: -5px;
+  }
+  /*.nav-links {
+    width:100%;
+    margin:auto;
+    text-align:center;
+    background:rgba(38, 70, 83, 1);
+  
+    position: sticky;
+    position: -webkit-sticky;/* Safari */
+    /*top: 0;
+    z-index:2000;
+    display: flex;
+    gap: 60px; /* 間距可調 */
+  /*}
+  
+.nav-links a {
+    
+    float:right;
+    padding:1.5em;
+    color:rgba(20, 33, 61, 1);
+      /*a是透明度設定*/
+   /* text-decoration:none;  
+    font-family: 'Rubik Broken Fax', 'Press Start 2P', 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: rgba(0,0,0,0.3); /* 可選半透明底，更好閱讀 */
+    /*border-radius: 4px;
+    transition: 0.3s;
+  }
+  
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .win98-button {
+    background-color: var(--button-face);
+    border: 2px solid;
+    border-color: var(--win98-light) var(--win98-darker)
+                  var(--win98-darker) var(--win98-light);
+    padding: 5px 18px;
+    cursor: pointer;
+    position: relative;
+    color: var(--win98-black);
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+  
+  

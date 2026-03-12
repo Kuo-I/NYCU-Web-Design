@@ -1,0 +1,14 @@
+<ul>
+    <li><a href="index.html">全部</a></li>
+    <li><a href="jade.html">玉器</a></li>
+    <li><a href="#">其他</a></li>
+</ul>
+<script>
+$(document).ready(function(){	
+        
+    var pn = $("body").data("pagenum");
+    $("li").eq(pn).addClass("ch_bg");
+            
+});
+</script>
+    

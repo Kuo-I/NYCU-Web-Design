@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*aside*/
+aside{
+	float:left;
+	height:480px;
+	width:200px;	
+}
+
+.box{
+	width: 200px;
+	height: 160px;
+	font-size:100px;
+	background: #0CF;
+}
+
+/*section*/
+section{
+	float:left;
+	height:480px;
+	width:480px;
+	background:#ddd;
+}
+
+.content{
+	width:480px;
+	height:480px;
+	background:#F60;
+    display: none;
+}
+
+.box:hover{
+	background:#36F;
+	cursor:pointer;
+}
+.ch_bg{
+    background:#36F;
+}
+
